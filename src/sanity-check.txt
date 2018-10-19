@@ -1,0 +1,13 @@
+Ok. I need a sanity check real quick.
+I'm gonna write this out how I understand it right now, and if I'm wrong, please correct me. 
+
+(I just started the user and signup permission flow)
+
+db.js: is part of prisma. is authenticated through environment variables. is the basic stuff that handles requests & responses. (sorry if the language isn't quite right coming from restapi land)
+datamodel.prisma: is part of prisma, tells it what kind of data to store for me.
+  (generated/prisma.graphql: part of prisma, tells US what it can do with the data we told it to store)
+createServer.js: is part of graphql-yoga. sets up the server that we can talk to with our backend, and provides all the endpoints we can hit from the frontend (which i guess should be though of as queries and mutations?)
+  schema.graphql: where we tell createServer.js that we have some queries and some mutations, and this is what they're called and what arguments they accept
+  Mutation.js & Query.js: where we do stuff with the queries and mutations that graphql-yoga recieves from the frontend
+  
+
